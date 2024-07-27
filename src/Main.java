@@ -53,12 +53,31 @@ public class Main {
         //comの手を生成
         com.createRandomHand();
 
-        System.out.println("テスト結果");
-        System.out.println(user.getHand().getHandName());
-      　System.out.println("ランダムなジャンケンの手をCPUにセットする");
-        System.out.println(com.getHand().getHandName());
+//        System.out.println("テスト結果");
+//        System.out.println(user.getHand().getHandName());
+//      　System.out.println("ランダムなジャンケンの手をCPUにセットする");
+//        System.out.println(com.getHand().getHandName());
 
         //勝敗判定
         int result = Game.judge(user, com);
+
+        //結果表示
+
+        //あなたの手:グー
+
+        //相手の手:パー
+
+        //結果:あなたの負け
+
+        System.out.println(user.getPlayerName() + "の手:" + user.getHand().getHandName());
+        System.out.println(com.getPlayerName() + "の手:" + com.getHand().getHandName());
+
+        if (result < 0) {
+            System.out.println("結果:" + user.getPlayerName() + "の負け");
+        } else if (result > 0) {
+            System.out.println("結果:" + user.getPlayerName() + "の勝ち");
+        } else {
+            System.out.println("結果:あいこ");
+        }
     }
 }
