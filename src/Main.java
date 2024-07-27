@@ -49,8 +49,14 @@ public class Main {
         }
 
         //以降にテストコードを追加して検証を行う
+
+        //comの手を生成
+        com.createRandomHand();
+
         System.out.println("テスト結果");
         System.out.println(user.getHand().getHandName());
+      　System.out.println("ランダムなジャンケンの手をCPUにセットする");
+        System.out.println(com.getHand().getHandName());
 
         //勝敗判定
         int result = Game.judge(user, com);
