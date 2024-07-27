@@ -51,5 +51,8 @@ public class Main {
         //以降にテストコードを追加して検証を行う
         System.out.println("テスト結果");
         System.out.println(user.getHand().getHandName());
+
+        //勝敗判定
+        int result = Game.judge(user, com);
     }
 }
